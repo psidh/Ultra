@@ -91,7 +91,8 @@ const MyForm: React.FC = () => {
           {Object.keys(techStackOptions).map((domain) => (
             <div
               key={domain}
-              className={`flex justify-between items-center py-2 mx-2 px-6 border border-gray-200 rounded-full dark:border-gray-700 my-2 ${
+              className={`flex justify-between items-center py-1  px-6 border
+               border-gray-200 rounded-full dark:border-gray-700 my-2 ${
                 formState.domain === domain ? 'bg-gray-500' : ''
               }`}
             >

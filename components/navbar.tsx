@@ -17,11 +17,11 @@ const NavBar = () => {
           <a className="text-[#005AC1]  hover:text-gray-300" href="/">
             Home
           </a>
-          <a className="  hover:text-blue-600" href="/blogs">
-            People
+          <a className="  hover:text-blue-600" href="/form">
+            Join
           </a>
-          <a className="  hover:text-blue-600" href="/#footer">
-            Contact
+          <a className="  hover:text-blue-600" href="/people">
+            People
           </a>
         </div>
         <RiMenuLine className="flex lg:hidden w-5 h-5 cursor-pointer" />

@@ -47,7 +47,7 @@ function renderSkillCategory(category: SkillCategory) {
   return (
     <div
       key={category.category}
-      className="flex flex-col justify-between border 
+      className="flex flex-grow flex-col justify-between border 
       rounded-xl border-gray-600 bg-[#1d1d1d] p-4  
       transition duration-300 "
     >
@@ -64,7 +64,6 @@ function renderSkillCategory(category: SkillCategory) {
         />
       </div>
       <div className="mt-4 w-full">
-        {/* Use category.skills instead of category.skills=> */}
         <p
           className="text-xs md:text-md lg:text-lg border border-gray-600 rounded-lg py-2 px-4 text-center"
           key={category.skills}
@@ -78,14 +77,11 @@ function renderSkillCategory(category: SkillCategory) {
 
 function Ocean() {
   return (
-    <div className=" flex flex-col sm:flex-col justify-center items-center">
+    <div className=" flex flex-col sm:flex-col justify-center items-center mb-12">
       <div className="flex flex-col justify-center items-center">
-        <p
-          className="text-3xl md:text-6xl font-montserrat text-transparent 
-          bg-clip-text bg-gradient-to-r from-white to-gray-400 my-24"
-        >
+        <h3 className=" my-24">
           Ocean of Opportunities
-        </p>
+        </h3>
         <div className="w-full">
           <div className="grid grid-cols-1  sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 items-start gap-4 ">
             {skillsData.map((category) => renderSkillCategory(category))}
