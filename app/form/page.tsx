@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 
 const initialFormState = {
-  name: 'name',
+  name: 'Your Name',
   email: 'email@gmail.com',
-  interested: 'github',
-  githubLink: 'https://github.com',
-  domain: 'github',
+  interested: 'your message here...',
+  githubLink: 'https://github.com/',
+  domain: 'app',
 };
 
 const MyForm: React.FC = () => {
@@ -160,12 +160,7 @@ const MyForm: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Submit button */}
-        <button type="submit" className="bg-[black] border-[#505050]">
-          Submit
-        </button>
-        <button onClick={handleSaveData} className="bg-[black] border-[#505050]">Save Data</button>
+        <button onClick={handleSaveData} className="bg-[black] border-[#505050]">Submit</button>
       </form>
     </div>
   );
