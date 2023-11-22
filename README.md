@@ -1,4 +1,4 @@
-<h1 align="center">🚀 Tech Enthusiasts Community</h1>
+<h1 align="center">🚀 Ultra-V1</h1>
 
 <div align="center">
   <strong>A vibrant hub for tech enthusiasts exploring diverse domains!</strong>
