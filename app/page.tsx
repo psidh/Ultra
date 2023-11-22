@@ -1,5 +1,4 @@
 import About from '@/components/about';
-import TechForm from '@/components/form';
 import Hero from '@/components/hero';
 import Line from '@/components/line';
 import Ocean from '@/components/ocean';

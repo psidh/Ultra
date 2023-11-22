@@ -1,17 +1,20 @@
 'use client';
 import React, { useState } from 'react';
-import { post } from '/api/form/route';
+
+const initialFormState = {
+  name: 'name',
+  email: 'email@gmail.com',
+  interested: 'github',
+  githubLink: 'https://github.com',
+  domain: 'github',
+};
 
 const MyForm: React.FC = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    interested: '',
-    githubLink: '',
-    domain: '',
-  });
+  const [formState, setFormState] = useState(initialFormState);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
@@ -24,7 +27,6 @@ const MyForm: React.FC = () => {
       domain,
     });
   };
-  
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,50 +36,55 @@ const MyForm: React.FC = () => {
   };
 
   const handleSaveData = async () => {
-    const response = await fetch('/api/form', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ data: formState }),
-    });
-
-    if (response.ok) {
-      alert('Data saved successfully!');
-      formState({
-        name: '',
-        email: '',
-        interested: '',
-        githubLink: '',
-        domain: '',
+    try {
+      console.log('Sending data:', formState);
+  
+      const response = await fetch('/api/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formState }), // Send formState directly
       });
-    } else {
-      alert('Something went wrong!');
+      
+      const responseData = await response.json(); // Parse response JSON
+  
+      console.log('Response:', response);
+  
+      if (response.ok) {
+        alert('Data saved successfully!');
+        setFormState(initialFormState); // Reset the form state
+      } else {
+        console.error('Server error:', responseData.error); // Log server error
+        alert('Something went wrong! Folks');
+      }
+    } catch (error) {
+      console.error('Error saving data:', error);
+      alert('Something went wrong! Folks');
     }
   };
-
-
+  
   
 
   return (
     <div className="flex justify-center items-center flex-col">
-      <h3 className='m-12'>
-        Get Started
-      </h3>
-      <form onSubmit={handleSubmit} className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-4/5 flex flex-col">
-        
+      <h3 className="m-12">Get Started</h3>
+      <form
+        onSubmit={handleSubmit}
+        className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-4/5 flex flex-col"
+      >
         {/* Name */}
         <label htmlFor="name" className="text-3xl">
           Name
         </label>
-        <input 
+        <input
           type="text"
           id="name"
           name="name"
           required
           value={formState.name}
           onChange={handleChange}
-          className='bg-[#2b2b2b]'
+          className="bg-[#2b2b2b]"
         />
 
         {/* Email */}
@@ -91,7 +98,7 @@ const MyForm: React.FC = () => {
           required
           value={formState.email}
           onChange={handleChange}
-          className='bg-[#2b2b2b]'
+          className="bg-[#2b2b2b]"
         />
 
         {/* Interested */}
@@ -104,12 +111,11 @@ const MyForm: React.FC = () => {
           required
           value={formState.interested}
           onChange={handleChange}
-          className='bg-[#2b2b2b] text-[white] px-4 py-2'
-          wrap='hard'
+          className="bg-[#2b2b2b] text-[white] px-4 py-2"
+          wrap="hard"
           rows={5}
           cols={50}
-          placeholder = 'Tell us why you are interested in joining.'
-
+          placeholder="Tell us why you are interested in joining."
         ></textarea>
 
         {/* GitHub Link */}
@@ -123,7 +129,7 @@ const MyForm: React.FC = () => {
           required
           value={formState.githubLink}
           onChange={handleChange}
-          className='bg-[#2b2b2b]'
+          className="bg-[#2b2b2b]"
         />
 
         {/* Domain */}
@@ -133,7 +139,9 @@ const MyForm: React.FC = () => {
             <div
               key={domain}
               className={`flex justify-between m-1 items-center border w-full border-[#505050] rounded-xl  ${
-                formState.domain === domain ? ' bg-white  text-black ' : ' text-white '
+                formState.domain === domain
+                  ? ' bg-white  text-black '
+                  : ' text-white '
               }`}
               onClick={() => handleDomainChange(domain)}
             >
@@ -144,21 +152,20 @@ const MyForm: React.FC = () => {
                 value={domain}
                 checked={formState.domain === domain}
                 onChange={() => ({})}
-                className='bg-[#2b2b2b] ml-6'
+                className="bg-[#2b2b2b] ml-6"
               />
-              <label htmlFor={domain} className='mr-6'>{domain}</label>
+              <label htmlFor={domain} className="mr-6">
+                {domain}
+              </label>
             </div>
           ))}
         </div>
 
         {/* Submit button */}
-        <button
-          type="submit"
-          className='bg-[black] border-[#505050]'
-        >
+        <button type="submit" className="bg-[black] border-[#505050]">
           Submit
         </button>
-        <button onClick={handleSaveData}>Save Data</button>
+        <button onClick={handleSaveData} className="bg-[black] border-[#505050]">Save Data</button>
       </form>
     </div>
   );
@@ -166,5 +173,4 @@ const MyForm: React.FC = () => {
 
 export default MyForm;
 
-
-// 
+//
