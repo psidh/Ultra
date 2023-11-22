@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { post } from '/api/form/route';
 
 const MyForm: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -23,8 +24,7 @@ const MyForm: React.FC = () => {
       domain,
     });
   };
-  // const [isSubmitted, setIsSubmitted] = useState(false);
-
+  
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,6 +32,30 @@ const MyForm: React.FC = () => {
     alert('Form submitted:' + JSON.stringify(formState, null, 2));
     // setIsSubmitted(true);
   };
+
+  const handleSaveData = async () => {
+    const response = await fetch('/api/form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: formState }),
+    });
+
+    if (response.ok) {
+      alert('Data saved successfully!');
+      formState({
+        name: '',
+        email: '',
+        interested: '',
+        githubLink: '',
+        domain: '',
+      });
+    } else {
+      alert('Something went wrong!');
+    }
+  };
+
 
   
 
@@ -134,6 +158,7 @@ const MyForm: React.FC = () => {
         >
           Submit
         </button>
+        <button onClick={handleSaveData}>Save Data</button>
       </form>
     </div>
   );
