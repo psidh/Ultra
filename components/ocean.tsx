@@ -80,7 +80,7 @@ function renderSkillCategory(category: SkillCategory) {
           rel="noreferrer"
           className="py-1 px-4 text-xs md:text-lg border 
           border-gray-600 rounded-lg text-center 
-          hover:bg-white hover:text-black transition duration-300
+          hover:bg-teal-200 hover:text-black transition duration-300 font-mono
           "
           key={category.skills}
         >
@@ -95,7 +95,7 @@ function Ocean() {
   return (
     <div className="w-full lg:w-1/2 px-4 lg:px-8">
       <div className="flex flex-col justify-center items-center">
-        <h3 className="my-24 text-3xl lg:text-5xl font-semibold">
+        <h3 className="my-24 text-3xl lg:text-6xl font-semibold">
           Ocean of Opportunities
         </h3>
         <div className="w-full">

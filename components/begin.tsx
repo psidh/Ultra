@@ -1,6 +1,5 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import Line from './line';
 
 function begin() {
   const router = useRouter();
@@ -9,7 +8,7 @@ function begin() {
   };
   return (
     <>
-      <div className="flex md:flex-row flex-col justify-between items-center my-16 xl:border-y 
+      <div className=" flex md:flex-row flex-col justify-between items-center my-16 xl:border-y 
       xl:border-gray-900 text-[#dcdcdc]">
         <div className="md:w-2/3">
           <img
@@ -25,7 +24,7 @@ function begin() {
           <h3 className="mx-16 my-4 md:mx-0">Join us on this adventure!</h3>
           <button
             onClick={handleClick}
-            className="mx-16 md:mx-0 w-2/3 md:w-full border-teal-400"
+            className="font-mono mx-16 md:mx-0 w-2/3 md:w-full border-gray-500"
           >
             Let's Go
           </button>

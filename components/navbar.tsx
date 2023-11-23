@@ -24,13 +24,13 @@ export default function Navbar() {
           </div>
         </a>
         <div className="gap-14 hidden lg:flex ">
-          <a className={`text-[#005AC1]`} href="/">
+          <a className={`text-teal-500`} href="/">
             Home
           </a>
-          <a className=" hover:text-[#005AC1]" href="/form">
+          <a className=" hover:text-teal-500" href="/form">
             Join
           </a>
-          <a className=" hover:text-[#005AC1]" href="/people">
+          <a className=" hover:text-teal-500" href="/people">
             People
           </a>
         </div>
@@ -42,13 +42,13 @@ export default function Navbar() {
 
       {isNavOpen && ( // Render the navigation links if isNavOpen is true
         <div className="flex flex-col lg:hidden ">
-          <a className="text-[#005AC1] m-4" href="/">
+          <a className="text-teal-500 m-4" href="/">
             Home
           </a>
-          <a className=" hover:text-[#005AC1] m-4" href="/form">
+          <a className=" hover:text-teal-500 m-4" href="/form">
             Join
           </a>
-          <a className=" hover:text-[#005AC1] m-4" href="/people">
+          <a className=" hover:text-teal-500 m-4" href="/people">
             People
           </a>
         </div>

@@ -167,7 +167,7 @@ const MyForm: React.FC = () => {
         </div>
         <button
           onClick={handleSaveData}
-          className="bg-[black] border-[#505050]"
+          className="hover:bg-teal-200 bg-black border-teal-700"
         >
           Submit
         </button>
