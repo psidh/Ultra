@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="px-20 lg:px-20 flex justify-between py-8 w-full
+      <div className="px-8 md:px-20 lg:px-20 flex justify-between py-8
       ">
         <a
           className="hover:scale-105 transition duration-300"
