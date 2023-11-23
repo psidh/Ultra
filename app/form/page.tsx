@@ -38,7 +38,7 @@ const MyForm: React.FC = () => {
   const handleSaveData = async () => {
     try {
       console.log('Sending data:', formState);
-  
+
       const response = await fetch('/api/form', {
         method: 'POST',
         headers: {
@@ -46,11 +46,11 @@ const MyForm: React.FC = () => {
         },
         body: JSON.stringify({ ...formState }), // Send formState directly
       });
-      
+
       const responseData = await response.json(); // Parse response JSON
-  
+
       console.log('Response:', response);
-  
+
       if (response.ok) {
         alert('Data saved successfully!');
         setFormState(initialFormState); // Reset the form state
@@ -63,12 +63,17 @@ const MyForm: React.FC = () => {
       alert('Something went wrong! Folks');
     }
   };
-  
-  
 
   return (
     <div className="flex justify-center items-center flex-col">
-      <h3 className="m-12">Get Started</h3>
+      <h3 className="m-12 text-4xl font-bold">
+        Ready to Embark on an Exciting Tech Journey?
+      </h3>
+      <p className="text-lg text-gray-400 my-12 mx-16">
+        Welcome to a community where innovation meets collaboration. We're
+        thrilled to learn more about you and why you're eager to join us! Let's
+        get started by filling out the form below.
+      </p>
       <form
         onSubmit={handleSubmit}
         className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-full lg:w-4/5 flex flex-col"
@@ -160,7 +165,12 @@ const MyForm: React.FC = () => {
             </div>
           ))}
         </div>
-        <button onClick={handleSaveData} className="bg-[black] border-[#505050]">Submit</button>
+        <button
+          onClick={handleSaveData}
+          className="bg-[black] border-[#505050]"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -62,7 +62,7 @@ function renderSkillCategory(category: SkillCategory) {
       <p className="text-md md:text-xl lg:text-2xl mb-4 text-center">
         {category.category}
       </p>
-      
+
       <div className="flex flex-col items-center justify-center w-full my-4">
         <Image
           src={category.image}
@@ -72,7 +72,7 @@ function renderSkillCategory(category: SkillCategory) {
           className=""
         />
       </div>
-      
+
       <div className="text-center mt-4">
         <a
           href={category.link}
@@ -93,11 +93,13 @@ function renderSkillCategory(category: SkillCategory) {
 
 function Ocean() {
   return (
-    <div className=" flex flex-col sm:flex-col justify-center items-center px-6 min-h-screen w-full">
+    <div className="w-full lg:w-1/2 px-4 lg:px-8">
       <div className="flex flex-col justify-center items-center">
-        <h3 className="my-12">Ocean of Opportunities</h3>
+        <h3 className="my-24 text-3xl lg:text-5xl font-semibold">
+          Ocean of Opportunities
+        </h3>
         <div className="w-full">
-          <div className="grid grid-cols-2 sm:grid-cols-4 items-start gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {skillsData.map((category) => renderSkillCategory(category))}
           </div>
         </div>
