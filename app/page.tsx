@@ -3,6 +3,7 @@ import Hero from '@/components/hero';
 import Line from '@/components/line';
 import Ocean from '@/components/ocean';
 import Ultra from '@/components/ultra';
+import Begin from '@/components/begin';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <About />
       <Line />
       <Ocean />
-      {/* <TechForm /> */}
+      <Begin />
     </div>
   );
 }
