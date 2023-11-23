@@ -3,6 +3,7 @@ interface SkillCategory {
   category: string;
   image: string;
   skills: string;
+  link:string;
 }
 
 const skillsData: SkillCategory[] = [
@@ -10,36 +11,43 @@ const skillsData: SkillCategory[] = [
     category: 'Front End',
     image: '/front-end.png',
     skills: 'React',
+    link:'https://react.dev/',
   },
   {
     category: 'Back End',
     image: '/back-end.png',
     skills: 'Spring',
+    link:'https://spring.io/',
   },
   {
     category: 'Full Stack',
     image: '/next.png',
     skills: 'NextJs',
+    link:'https://nextjs.org/',
   },
   {
     category: 'ML DL',
     image: '/ml.png',
     skills: 'TensorFlow',
+    link:'https://www.tensorflow.org/',
   },
   {
     category: 'App Dev',
     image: '/flutter.png',
     skills: 'Flutter',
+    link:'https://flutter.dev/',
   },
   {
     category: 'DevOps',
     image: '/devops.png',
     skills: 'Github',
+    link: 'https://github.com',
   },
   {
     category: 'Cloud',
     image: '/cloud.webp',
     skills: 'Google Cloud',
+    link:'https://cloud.google.com/',
   },
 ];
 
@@ -63,13 +71,14 @@ function renderSkillCategory(category: SkillCategory) {
           className=""
         />
       </div>
-      <div className="mt-4 w-full">
-        <p
-          className="text-xs md:text-md lg:text-lg border border-gray-600 rounded-lg py-2 px-4 text-center"
+      <div className="text-center mt-4">
+        <a href={category.link} target='_blank' rel='noreferrer'
+          className="py-1 px-6 text-xs md:text-md lg:text-lg border 
+          border-gray-600 rounded-lg  text-center hover:bg-white hover:text-black transition duration-300"
           key={category.skills}
         >
           {category.skills}
-        </p>
+        </a>
       </div>
     </div>
   );

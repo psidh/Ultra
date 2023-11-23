@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 
 const initialFormState = {
-  name: 'Your Name',
-  email: 'email@gmail.com',
+  name: '',
+  email: '',
   interested: 'your message here...',
   githubLink: 'https://github.com/',
-  domain: 'app',
+  domain: '',
 };
 
 const MyForm: React.FC = () => {

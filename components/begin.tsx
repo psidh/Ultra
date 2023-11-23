@@ -18,9 +18,15 @@ function begin() {
           className="w-full h-full opacity-80"
         />
       </div>
-      <div className="w-full md:w-1/3 flex flex-col items-center justify-center md:mx-16 mx-0 md:my-0 my-16">
-        <h3>Join the Community</h3>
-        <button onClick={handleClick}>Let's Go</button>
+      <div className="w-full md:w-1/3 flex flex-col items-center justify-center  m-8">
+        <h3  className='mx-16 my-8 md:mx-0'>
+          Ready to turn your code into a symphony of innovation? 
+        </h3>
+        <h3  className='mx-16 my-8 md:mx-0'>
+        Join us on
+          this adventure!
+        </h3>
+        <button onClick={handleClick} className='mx-16 md:mx-0 w-2/3 md:w-full'>Let's Go</button>
       </div>
       </div>      
     </div>
