@@ -88,11 +88,11 @@ function Ocean() {
   return (
     <div className=" flex flex-col sm:flex-col justify-center items-center mb-12">
       <div className="flex flex-col justify-center items-center">
-        <h3 className=" my-24">
+        <h3 className="my-24">
           Ocean of Opportunities
         </h3>
         <div className="w-full">
-          <div className="grid grid-cols-1  sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 items-start gap-4 ">
+          <div className="grid grid-cols-2 md:grid-cols-5 xl:grid-cols-6 items-start gap-4">
             {skillsData.map((category) => renderSkillCategory(category))}
           </div>
         </div>
