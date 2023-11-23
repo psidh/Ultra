@@ -71,7 +71,7 @@ const MyForm: React.FC = () => {
       <h3 className="m-12">Get Started</h3>
       <form
         onSubmit={handleSubmit}
-        className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-4/5 flex flex-col"
+        className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-full lg:w-4/5 flex flex-col"
       >
         {/* Name */}
         <label htmlFor="name" className="text-3xl">
