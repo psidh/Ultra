@@ -11,9 +11,9 @@ export default function Home() {
       <Hero />
       <About />
       <Line />
-      <Meet />
-      <Line />
       <Begin />
+      <Line />
+      <Meet />
     </div>
   );
 }
