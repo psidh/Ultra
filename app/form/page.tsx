@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const initialFormState = {
   name: '',
   email: '',
-  interested: 'your message here...',
+  interested: '',
   githubLink: 'https://github.com/',
   domain: '',
 };
@@ -87,6 +87,7 @@ const MyForm: React.FC = () => {
           id="name"
           name="name"
           required
+          placeholder='Type your name...'
           value={formState.name}
           onChange={handleChange}
           className="bg-[#2b2b2b]"
@@ -101,6 +102,7 @@ const MyForm: React.FC = () => {
           id="email"
           name="email"
           required
+          placeholder='Type your email ID...'
           value={formState.email}
           onChange={handleChange}
           className="bg-[#2b2b2b]"
@@ -108,7 +110,7 @@ const MyForm: React.FC = () => {
 
         {/* Interested */}
         <label htmlFor="interested" className="text-3xl">
-          Why are you interested?
+          Why are you interested? (Include your past experiences)
         </label>
         <textarea
           id="interested"
@@ -120,7 +122,8 @@ const MyForm: React.FC = () => {
           wrap="hard"
           rows={5}
           cols={50}
-          placeholder="Tell us why you are interested in joining."
+          placeholder="Tell us why you are interested in joining the community (This will determine whether you are genuinely interested and enthusiastic )
+          You can even add your experiences..."
         ></textarea>
 
         {/* GitHub Link */}
@@ -140,7 +143,7 @@ const MyForm: React.FC = () => {
         {/* Domain */}
         <label className="text-3xl">Domain</label>
         <div className="flex justify-between items-center md:flex-row flex-col ">
-          {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML'].map((domain) => (
+          {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML', 'Block Chain'].map((domain) => (
             <div
               key={domain}
               className={`flex justify-between m-1 items-center border w-full border-[#505050] rounded-xl  ${
