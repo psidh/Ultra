@@ -13,25 +13,25 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="px-8 md:px-20 lg:px-20 flex justify-between py-8
+      <div className="px-8 md:px-20 lg:px-20 
+      flex justify-between py-8 fixed xl:bg-black w-full 
+      xl:bg-opacity-90 backdrop-blur-sm
       ">
-        <a
-          className="hover:scale-105 transition duration-300"
-          href="mailto:philkhanasidharth14@gmail.com"
-        >
-          <div className="flex gap-4 items-center">
-            <MdOutlineMail className="text-2xl" /> Contact
-          </div>
+        <a className={`text-teal-500`} href="/">
+            Home
         </a>
         <div className="gap-14 hidden lg:flex ">
-          <a className={`text-teal-500`} href="/">
-            Home
-          </a>
+          
           <a className=" hover:text-teal-500" href="/form">
             Join
           </a>
           <a className=" hover:text-teal-500" href="/people">
             People
+          </a>
+          <a
+          className="hover:scale-105 transition duration-300"
+          href="mailto:philkhanasidharth14@gmail.com"
+          >Contact
           </a>
         </div>
         <RiMenuLine
@@ -42,14 +42,16 @@ export default function Navbar() {
 
       {isNavOpen && ( // Render the navigation links if isNavOpen is true
         <div className="flex flex-col lg:hidden ">
-          <a className="text-teal-500 m-4" href="/">
-            Home
-          </a>
-          <a className=" hover:text-teal-500 m-4" href="/form">
+          <a className=" hover:text-teal-500 mx-8 mb-4" href="/form">
             Join
           </a>
-          <a className=" hover:text-teal-500 m-4" href="/people">
+          <a className=" hover:text-teal-500 mx-8 my-4" href="/people">
             People
+          </a>
+          <a
+          className=" hover:text-teal-500 mx-8 my-4"
+          href="mailto:philkhanasidharth14@gmail.com"
+          >Contact
           </a>
         </div>
       )}
