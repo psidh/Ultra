@@ -14,8 +14,8 @@ export default function Navbar() {
   return (
     <div>
       <div className="px-8 md:px-20 lg:px-20 
-      flex justify-between py-8 fixed xl:bg-black w-full 
-      xl:bg-opacity-90 backdrop-blur-sm
+      flex justify-between py-8 xl:bg-black w-full 
+      xl:bg-opacity-90 backdrop-blur-sm absolute
       ">
         <a className={`text-teal-500`} href="/">
             Home
