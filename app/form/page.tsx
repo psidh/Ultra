@@ -58,9 +58,8 @@ const MyForm: React.FC = () => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        progress: 0.1,
         theme: "light"});
-        
+
         setFormState(initialFormState); // Reset the form state
       } else {
         console.error('Server error:', responseData.error); // Log server error
