@@ -49,6 +49,12 @@ const skillsData: SkillCategory[] = [
     skills: 'GCP',
     link: 'https://cloud.google.com/',
   },
+  {
+    category: 'BlockChain',
+    image: '/eth.svg',
+    skills: 'Ethereum',
+    link: 'https://ethereum.org/en/',
+  },
 ];
 
 function renderSkillCategory(category: SkillCategory) {
@@ -59,7 +65,7 @@ function renderSkillCategory(category: SkillCategory) {
       rounded-xl border-gray-600 bg-[#1d1d1d] p-4 
       transition duration-300 "
     >
-      <p className="text-md md:text-xl lg:text-2xl mb-4 text-center">
+      <p className="text-md md:xl mb-4 text-center">
         {category.category}
       </p>
 
@@ -78,7 +84,7 @@ function renderSkillCategory(category: SkillCategory) {
           href={category.link}
           target="_blank"
           rel="noreferrer"
-          className="py-1 px-4 text-xs md:text-lg border 
+          className="py-1 px-4 text-xs md:text-md border 
           border-gray-600 rounded-lg text-center 
           hover:bg-teal-200 hover:text-black transition duration-300 font-mono
           "

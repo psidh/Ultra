@@ -6,7 +6,7 @@ function About() {
   return (
     <div className=" flex flex-col items-center justify-center h-fit my-32">
       <div className="text-center text-white  w-3/4">
-        <h2 className="text-5xl lg:text-6xl font-semibold my-16 font-mono">Welcome to Ultra</h2>
+        <h2 className="text-5xl lg:text-6xl font-semibold my-16">Welcome to Ultra</h2>
         <p className="text-lg md:text-2xl my-16 text-center text-gray-500">
           Embark on an extraordinary coding journey with us. 🚀
           <br />
