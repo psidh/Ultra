@@ -1,23 +1,18 @@
 const peopleData = [
 {
   name: 'Kimish Choudhary',
-  image: '',
-  role: 'Learning HTML CSS'
+  image: '/people/kimish.jpeg',
+  role: 'HTML CSS'
 },
 {
   name: 'Sudheer Sahu',
-  image: '',
-  role: 'Learning JavaScript'
+  image: '/people/sudheer.jpeg',
+  role: 'JavaScript'
 },
 {
   name: 'Gowtam Sashank',
-  image: '',
-  role: 'Learning JavaScript'
-},
-{
-  name: 'Vanshika',
-  image: '',
-  role: 'Learning HTML CSS'
+  image: '/people/gowtam.jpeg',
+  role: 'HTML Tailwind CSS'
 },
 ]
 
