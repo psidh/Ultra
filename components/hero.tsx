@@ -1,7 +1,7 @@
 import Ocean from './ocean';
 function Hero() {
   return (
-    <section className="h-fit mb-8 ">
+    <section className="h-fit mb-8">
       <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
         <div className="bg-white text-black w-full lg:w-1/2 h-screen flex flex-col justify-center items-center px-8 lg:px-24">
           <h1 className="text-4xl md:text-5xl font-mono text-center">
