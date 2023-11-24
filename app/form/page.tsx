@@ -28,13 +28,6 @@ const MyForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    alert('Form submitted:' + JSON.stringify(formState, null, 2));
-    // setIsSubmitted(true);
-  };
-
   const handleSaveData = async () => {
     try {
       console.log('Sending data:', formState);
@@ -75,7 +68,7 @@ const MyForm: React.FC = () => {
         get started by filling out the form below.
       </p>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSaveData}
         className="mb-4 px-12 py-8 bg-[#1c1c1c] rounded-md w-full lg:w-4/5 flex flex-col"
       >
         {/* Name */}
@@ -121,7 +114,7 @@ const MyForm: React.FC = () => {
           className="bg-[#2b2b2b] text-[white] px-4 py-2"
           wrap="hard"
           rows={5}
-          cols={50}
+          cols={100}
           placeholder="Tell us why you are interested in joining the community (This will determine whether you are genuinely interested and enthusiastic )
           You can even add your experiences..."
         ></textarea>
@@ -143,7 +136,7 @@ const MyForm: React.FC = () => {
         {/* Domain */}
         <label className="text-3xl">Domain</label>
         <div className="flex justify-between items-center md:flex-row flex-col ">
-          {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML', 'Block Chain'].map((domain) => (
+          {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML', 'Blockchain'].map((domain) => (
             <div
               key={domain}
               className={`flex justify-between m-1 items-center border w-full border-[#505050] rounded-xl  ${
