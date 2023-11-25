@@ -10,7 +10,7 @@ export default function Faq() {
             Have Doubts? 
           </h3>
           <h4 className='mb-4'>Don't worry, hop into FAQs section</h4>
-          <a href="/faqs" className={faqClass}>FAQs</a>
+          <a href="/FAQs" className={faqClass}>FAQs</a>
         </div>
       </div>
     </div>
