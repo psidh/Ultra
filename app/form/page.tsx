@@ -99,7 +99,7 @@ const MyForm: React.FC = () => {
             placeholder="Type your name..."
             value={formState.name}
             onChange={handleChange}
-            className="bg-[#2b2b2b]"
+            className="bg-[#2b2b2b] py-4 px-6"
           />
 
           {/* Email */}
@@ -114,7 +114,7 @@ const MyForm: React.FC = () => {
             placeholder="Type your email ID..."
             value={formState.email}
             onChange={handleChange}
-            className="bg-[#2b2b2b]"
+            className="bg-[#2b2b2b] py-4 px-6"
           />
 
           {/* Interested */}
@@ -127,7 +127,7 @@ const MyForm: React.FC = () => {
             required
             value={formState.interested}
             onChange={handleChange}
-            className="bg-[#2b2b2b] text-[white] px-4 py-2"
+            className="bg-[#2b2b2b] text-[white] p-4"
             wrap="hard"
             rows={5}
             cols={50}
@@ -146,7 +146,7 @@ const MyForm: React.FC = () => {
             required
             value={formState.githubLink}
             onChange={handleChange}
-            className="bg-[#2b2b2b]"
+            className="bg-[#2b2b2b] py-4 px-6"
           />
 
           {/* Domain */}
