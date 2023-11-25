@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
 
       <div className="py-8 border-t border-gray-600 ">
         <p className="text-sm text-gray-500 text-center">
-          &copy; {new Date().getFullYear()} Tech Enthusiasts Community. All rights reserved.
+          &copy; {new Date().getFullYear()} Ultra. All rights reserved.
         </p>
       </div>
     </footer>
