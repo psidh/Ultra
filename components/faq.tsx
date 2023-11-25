@@ -4,7 +4,7 @@ export default function Faq() {
   return (
     <div className='flex min-h-fit items-center justify-center'>
       <div className="w-4/5 flex flex-col md:flex-row justify-between mx-10 items-center">
-        <Image src="/faq.png" width={500} height={500} alt="StorySet FAQ" />
+        <Image src="/faq.svg" width={500} height={500} alt="StorySet FAQ" />
         <div className="my-4 flex flex-col items-center justify-center">
           <h3>
             Have Doubts? 
