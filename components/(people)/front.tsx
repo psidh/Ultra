@@ -37,7 +37,7 @@ const Front: React.FC = () => {
           />
           <h2 className="text-xl font-semibold text-center">Manas Malla</h2>
           <p className="text-gray-500 text-center">
-            Co-Founder | GDSC Lead <br /> Flutter | Android
+            CTO | GDSC Lead <br /> Flutter | Android
           </p>
         </div>
       </div>

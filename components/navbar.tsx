@@ -28,6 +28,9 @@ export default function Navbar() {
           <a className=" hover:text-teal-500" href="/people">
             People
           </a>
+          <a className=" hover:text-teal-500" href="/FAQs">
+            FAQs
+          </a>
           <a
           className="hover:scale-105 transition duration-300"
           href="mailto:philkhanasidharth14@gmail.com"
