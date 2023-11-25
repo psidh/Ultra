@@ -8,7 +8,7 @@ function begin() {
   };
   return (
     <>
-      <div className="font-mono flex md:flex-row flex-col justify-between items-center m-16  text-[#dcdcdc]">
+      <div className="font-mono flex md:flex-row flex-col justify-between items-center my-32 mx-16  text-[#dcdcdc]">
         <div className="md:w-1/2 flex flex-col justify-center items-center">
           <img
             src="/people/me.jpeg"

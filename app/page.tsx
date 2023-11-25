@@ -15,6 +15,7 @@ export default function Home() {
       <Begin />
       <Line />
       <Faq />
+      <Line />
       <Meet />
     </div>
   );
