@@ -137,7 +137,7 @@ const MyForm: React.FC = () => {
 
           {/* GitHub Link */}
           <label htmlFor="githubLink" className="text-3xl">
-            GitHub Link
+            GitHub Profile (required)
           </label>
           <input
             type="url"
