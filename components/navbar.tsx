@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div>
       <div className="px-8 md:px-20 lg:px-20 
-      flex justify-between py-8 
+      flex justify-between py-8  bg-transparent
       
       ">
         <a className={`text-teal-500`} href="/">
@@ -24,6 +24,9 @@ export default function Navbar() {
           
           <a className=" hover:text-teal-500" href="/form">
             Join
+          </a>
+          <a className=" hover:text-teal-500" href="/timeline">
+            Timeline
           </a>
           <a className=" hover:text-teal-500" href="/people">
             People
@@ -48,8 +51,14 @@ export default function Navbar() {
           <a className=" hover:text-teal-500 mx-8 mb-4" href="/form">
             Join
           </a>
+          <a className=" hover:text-teal-500" href="/timeline">
+            Timeline
+          </a>
           <a className=" hover:text-teal-500 mx-8 my-4" href="/people">
             People
+          </a>
+          <a className=" hover:text-teal-500" href="/FAQs">
+            FAQs
           </a>
           <a
           className=" hover:text-teal-500 mx-8 my-4"
