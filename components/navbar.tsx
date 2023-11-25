@@ -51,13 +51,13 @@ export default function Navbar() {
           <a className=" hover:text-teal-500 mx-8 mb-4" href="/form">
             Join
           </a>
-          <a className=" hover:text-teal-500" href="/timeline">
+          <a className=" hover:text-teal-500 mx-8 my-4" href="/timeline">
             Timeline
           </a>
           <a className=" hover:text-teal-500 mx-8 my-4" href="/people">
             People
           </a>
-          <a className=" hover:text-teal-500" href="/FAQs">
+          <a className=" hover:text-teal-500 mx-8 my-4" href="/FAQs">
             FAQs
           </a>
           <a

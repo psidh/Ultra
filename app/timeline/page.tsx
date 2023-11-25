@@ -28,13 +28,13 @@ function Timeline() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto mt-8 h-screen">
+    <div className="max-w-4xl mx-auto mt-8 h-screen text-left overflow-x-auto">
       <table className="w-full border-collapse">
         <thead>
           <tr>
-            <th className="bg-[#1c1c1c] text-white p-4">Month/Week</th>
+            <th className="bg-[#1c1c1c] text-white p-4 border border-[#484848]">Month/Week</th>
             {weekNumbers.map((weekNumber) => (
-              <th key={weekNumber} className="bg-[#1c1c1c] text-white p-4">
+              <th key={weekNumber} className="bg-[#1c1c1c] text-white p-4 border border-[#484848]">
                 {weekNumber}
               </th>
             ))}
@@ -42,10 +42,10 @@ function Timeline() {
         </thead>
         <tbody>
           {months.map((month, monthIndex) => (
-            <tr key={month} className={monthIndex % 2 === 0 ? 'bg-[#1b1b1b]' : 'bg-[#1c1c1c] text-white'}>
+            <tr key={month} className={monthIndex % 2 === 0 ? 'bg-[#292929] border border-[#484848]' : 'bg-[#292929] border border-[#484848] text-white'}>
               <td className="p-4">{month}</td>
               {weekNumbers.map((weekNumber) => (
-                <td key={weekNumber} className="p-4">
+                <td key={weekNumber} className="p-4 border border-[#484848]">
                   {Array.isArray(schedule.find((entry) => entry.month === month)?.[weekNumber]) ? (
                     <ul>
                       {(schedule.find((entry) => entry.month === month)?.[weekNumber] as string[]).map((task, index: number) => (
