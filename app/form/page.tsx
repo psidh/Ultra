@@ -152,7 +152,7 @@ const MyForm: React.FC = () => {
           {/* Domain */}
           <label className="text-3xl">Domain</label>
           <div className="flex justify-between items-center md:flex-row flex-col ">
-            {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML', 'Block Chain'].map(
+            {['App', 'Web', 'Cloud', 'DevOps', 'DSA', 'ML', 'Blockchain'].map(
               (domain) => (
                 <div
                   key={domain}
