@@ -7,12 +7,12 @@ const peopleData = [
 {
   name: 'Sudheer Sahu',
   image: '/people/sudheer.jpeg',
-  role: 'JavaScript'
+  role: 'HTML CSS'
 },
 {
   name: 'Gowtam Sashank',
   image: '/people/gowtam.jpeg',
-  role: 'HTML Tailwind CSS'
+  role: 'HTML CSS'
 },
 ]
 

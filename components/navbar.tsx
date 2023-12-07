@@ -1,14 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
-import { MdOutlineMail } from 'react-icons/md';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
     console.log('Toggle Nav Clicked');
-    setIsNavOpen(!isNavOpen);
+    setIsNavOpen(!isNavOpen)
   };
 
   return (
