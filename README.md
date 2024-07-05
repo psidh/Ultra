@@ -35,18 +35,18 @@ Welcome to the Tech Enthusiasts Community! This vibrant community is a playgroun
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/tech-enthusiasts-community.git
+   git clone https://github.com/(your-username)/Ultra-v1.git
    ```
 
 2. **Installation:**
    ```bash
-   cd tech-enthusiasts-community
+   cd Ultra-v1
    npm install
    ```
 
 3. **Run the Application:**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## 🌟 Contributing
