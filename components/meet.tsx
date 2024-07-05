@@ -1,14 +1,14 @@
-'use client';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useRouter } from "next/navigation";
 
 function begin() {
   const router = useRouter();
   const handleClick = () => {
-    router.push('/people');
+    router.push("/people");
   };
   return (
     <>
-      <div className="font-mono flex md:flex-row flex-col justify-between items-center my-32 mx-16  text-[#dcdcdc]">
+      <div className="font-mono flex md:flex-row flex-col justify-between items-center my-32 mx-16">
         <div className="md:w-1/2 flex flex-col justify-center items-center">
           <img
             src="/people/me.jpeg"
