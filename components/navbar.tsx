@@ -21,7 +21,13 @@ export default function Navbar() {
         <p className="font-bold text-outline text-2xl border-[1.5px] border-black px-[0.6rem] py-[2px] rounded-md hover:bg-black hover:text-outline-white hover:scale-[110%] transition-all duration-300">
           U
         </p>
-        <p className="font-bold text-2xl">Ultra</p>
+        <p className="font-bold text-2xl leading-4 mt-1">
+          Ultra
+          <br />
+          <span className="text-[0.72rem] font-medium lowercase">
+            the ananta initiative
+          </span>
+        </p>
       </a>
       <div className="hidden lg:flex nav font-light text-sm tracking-wider">
         <a
