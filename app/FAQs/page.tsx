@@ -49,35 +49,31 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center ">
-      <div className="max-w-3xl w-full px-16 md:px-0 md:w-4/5 mt-8 h-screen">
-        <h2 className="text-4xl font-bold my-16 text-neutral-100">
-          Frequently Asked Questions
-        </h2>
-        <div>
-          {faqData.map((faq) => (
-            <div key={faq.id} className="my-4">
-              <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => toggleItem(faq.id)}
+    <div className="">
+      <h2 className="border-y-[1px] py-12 border-black px-16 text-4xl font-bold">
+        Frequently Asked Questions
+      </h2>
+      <div className="py-16 px-16 w-[65ch]">
+        {faqData.map((faq) => (
+          <div key={faq.id} className="my-4">
+            <div
+              className="flex justify-between items-center cursor-pointer"
+              onClick={() => toggleItem(faq.id)}
+            >
+              <h3 className="text-xl font-semibold">{faq.question}</h3>
+              <span
+                className={`transition-transform transform duration-300  ${
+                  openItems.includes(faq.id) ? "rotate-180" : ""
+                }`}
               >
-                <h3 className="text-xl font-semibold text-neutral-300">
-                  {faq.question}
-                </h3>
-                <span
-                  className={`transition-transform transform duration-300  ${
-                    openItems.includes(faq.id) ? "rotate-180" : ""
-                  }`}
-                >
-                  ▼
-                </span>
-              </div>
-              {openItems.includes(faq.id) && (
-                <p className="my-2 text-neutral-500">{faq.answer}</p>
-              )}
+                ▼
+              </span>
             </div>
-          ))}
-        </div>
+            {openItems.includes(faq.id) && (
+              <p className="my-2 text-neutral-700">{faq.answer}</p>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

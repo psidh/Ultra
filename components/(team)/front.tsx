@@ -1,18 +1,23 @@
-import frontData from "../../utils/front.js";
+import { FiArrowUpRight } from "react-icons/fi";
+import {
+  executive,
+  frontendTeam,
+  machineLearningTeam,
+} from "../../utils/front.js";
 import Line from "../line";
+import Link from "next/link.js";
 
 interface Person {
   name: string;
   image: string;
   role: string;
+  url: string;
 }
-
-const team: Person[] = frontData;
 
 const Front: React.FC = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold my-8 text-center">Our Team</h1>
+      {/* <h1 className="text-4xl font-bold my-8 text-center">Our Team</h1>
       <div className="flex items-center justify-center md:space-x-16 h-fit">
         <div className="my-8 md:my-16 flex flex-col items-center justify-between">
           <img
@@ -40,25 +45,93 @@ const Front: React.FC = () => {
             Chief Technical Officer <br /> Google Product Expert - Android
           </p>
         </div>
-      </div>
-      <h1 className="text-2xl md:text-4xl font-bold px-16 text-left ">
-        Front-End Team
-      </h1>
-      <Line />
-      <div className="m-16 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-8">
-        {team.map((person) => (
+      </div> */}
+      <h2 className="text-2xl md:text-4xl font-bold py-12 px-16 border-y-[1px] border-black">
+        Executive Team
+      </h2>
+      {/* <Line /> */}
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full">
+        {executive.map((person) => (
           <div
             key={person.name}
-            className="p-4 rounded-md border border-neutral-200 flex flex-col items-center justify-center"
+            className="shrink-0 grow even:border-x-[1px] border-black flex flex-col justify-center w-full"
           >
             <img
               src={person.image}
               alt={person.name}
-              className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-full mb-4 text-center"
+              className="w-full h-44 md:h-72 object-cover mb-4"
             />
-            <h2 className="text-lg md:text-xl font-semibold text-center">
-              {person.name}
-            </h2>
+            <div className="p-4 flex">
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold whitespace-pre-wrap mb-1">
+                  {person.name}
+                </h2>
+                <p className="opacity-70 font-light whitespace-pre-wrap">
+                  {person.role}
+                </p>
+              </div>
+              <Link className="ml-auto" href={person.url}>
+                <FiArrowUpRight size={24} />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2 className="text-2xl md:text-4xl font-bold py-12 px-16 border-t-[1px] border-black">
+        Front-End Development
+      </h2>
+      {/* <Line /> */}
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full">
+        {frontendTeam.map((person) => (
+          <div
+            key={person.name}
+            className="shrink-0 grow border-y even:border border-black flex flex-col justify-center w-full"
+          >
+            <img
+              src={person.image}
+              alt={person.name}
+              className="w-full h-44 md:h-72 object-cover mb-4 border-b-[1px] border-black"
+            />
+            <div className="p-4 flex">
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold whitespace-pre-wrap mb-1">
+                  {person.name}
+                </h2>
+                <p className="opacity-70 font-light">{person.role}</p>
+              </div>
+              <Link className="ml-auto" href={person.url}>
+                <FiArrowUpRight size={24} />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h2 className="text-2xl md:text-4xl font-bold py-12 px-16">
+        Machine Learning
+      </h2>
+      {/* <Line /> */}
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full border-[1px] border-black">
+        {machineLearningTeam.map((person) => (
+          <div
+            key={person.name}
+            className="shrink-0 grow border-y border border-black flex flex-col justify-center w-full"
+          >
+            <img
+              src={person.image}
+              alt={person.name}
+              className="w-full h-44 md:h-72 object-cover mb-4"
+            />
+            <div className="p-4 flex">
+              <div>
+                <h2 className="text-lg md:text-xl font-semibold whitespace-pre-wrap mb-1">
+                  {person.name}
+                </h2>
+                <p className="opacity-70 font-light">{person.role}</p>
+              </div>
+              <Link className="ml-auto" href={person.url}>
+                <FiArrowUpRight size={24} />
+              </Link>
+            </div>
           </div>
         ))}
       </div>

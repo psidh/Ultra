@@ -45,12 +45,12 @@ label {
 }
 
 textarea {
-  @apply my-4  rounded-md focus:outline-none border-neutral-200 border;
+  @apply my-4  rounded-md focus:outline-none border-black border;
 }
 
 
 input {
-  @apply py-4 px-6 my-4 rounded-md focus:outline-none border-neutral-200 border;
+  @apply py-4 px-6 my-4 rounded-md focus:outline-none border-black border;
 }
 
 button {
@@ -62,7 +62,7 @@ p {
 }
 
 .domain{
-  @apply flex justify-between cursor-pointer m-1 items-center border w-full border-neutral-200 rounded-xl 
+  @apply flex justify-between cursor-pointer m-1 items-center border w-full border-black rounded-xl 
 }
 
 .about{

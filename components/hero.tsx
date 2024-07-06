@@ -1,21 +1,21 @@
 import Ocean from "./ocean";
 function Hero() {
   return (
-    <section className="h-[87vh] border-b-[1.5px] border-neutral-200">
+    <section className="h-[87vh] border-b-[1.5px] border-black">
       <div className="flex flex-col lg:flex-row justify-between items-center h-full w-full">
-        <div className="w-full lg:w-1/2 border-r-[1px] border-neutral-200 relative overflow-clip h-full">
+        <div className="w-full lg:w-1/2 border-r-[1px] border-black relative overflow-clip h-full">
           <img
             title="homepage_background"
             src="/space/homepage_background.svg"
             className="h-full w-full object-cover"
           />
           <img
-           title="stars tiny"
+            title="stars tiny"
             src="/space/stars-tiny.svg"
             className="h-full w-full object-fill absolute z-10 top-0 left-0 scale-150 opacity-70"
           />
           <img
-           title="earth"  
+            title="earth"
             src="/space/earth.svg"
             className="h-full w-full object-fill absolute z-20 -bottom-1/2 -right-1/2"
           />
