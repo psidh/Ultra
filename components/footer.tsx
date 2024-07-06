@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import React from "react";
+import { FaTwitter, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 // Define the FooterProps interface
 interface FooterProps {
@@ -14,22 +14,39 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
     <footer className="bg-[#1d1d1d] text-white">
       <div className="container mx-auto w-full py-12">
         {/* Logo and About Section */}
-        <div className='p-8 md:p-0'>
+        <div className="p-8 md:p-0">
           <h2 className="text-4xl font-bold py-2">Ultra</h2>
-          <p className="text-gray-400 py-2">
-            Join our community of tech enthusiasts to learn, collaborate, and grow together in the ever-evolving world of technology.
+          <p className="text-gray-400 py-2 w-[32ch]">
+            Join our community of tech enthusiasts to learn, collaborate, and
+            grow together in the ever-evolving world of technology.
           </p>
           <div className="flex mt-4 space-x-4 py-2">
-            <a href="https://twitter.com/p-s1dharth" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com/p-s1dharth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter className="text-white hover:text-blue-400" />
             </a>
-            <a href="https://Instagarm.com/p-s1dharth" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://Instagarm.com/p-s1dharth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram className="text-white hover:text-blue-600" />
             </a>
-            <a href="https://linkedin.com/in/p-sidharth" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://linkedin.com/in/p-sidharth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin className="text-white hover:text-blue-500" />
             </a>
-            <a href="https://github.com/psidh" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/psidh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className="text-white hover:text-gray-600" />
             </a>
           </div>
@@ -54,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
       </div>
 
       <div className="py-8 border-t border-gray-600 ">
-        <p className="text-sm text-gray-500 text-center">
+        <p className="text-sm opacity-60 text-center">
           &copy; {new Date().getFullYear()} Ultra. All rights reserved.
         </p>
       </div>

@@ -1,71 +1,76 @@
-'use client';
-import React, { useState } from 'react';
-import { RiMenuLine } from 'react-icons/ri';
+"use client";
+import React, { useState } from "react";
+import { RiMenuLine } from "react-icons/ri";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
-    console.log('Toggle Nav Clicked');
-    setIsNavOpen(!isNavOpen)
+    console.log("Toggle Nav Clicked");
+    setIsNavOpen(!isNavOpen);
   };
 
   return (
-    <div>
-      <div className="px-8 md:px-20 lg:px-20 
-      flex justify-between py-8  bg-transparent
+    <div
+      className="px-8 md:px-20 lg:px-20 
+      flex justify-between items-center border-[1px] border-t-0 border-black uppercase
       
-      ">
-        <a className={`text-teal-500`} href="/">
-            Home
+      "
+    >
+      <a href="/" className="flex gap-4 items-center py-6">
+        <p className="font-bold text-outline text-2xl border-[1.5px] border-black px-[0.6rem] py-[2px] rounded-md hover:bg-black hover:text-outline-white hover:scale-[110%] transition-all duration-300">
+          U
+        </p>
+        <p className="font-bold text-2xl leading-4 mt-1">
+          Ultra
+          <br />
+          <span className="text-[0.72rem] font-medium lowercase">
+            the ananta initiative
+          </span>
+        </p>
+      </a>
+      <div className="hidden lg:flex nav font-light text-sm tracking-wider">
+        <a
+          className={`hover:underline underline-offset-[6px] decoration-[1px]`}
+          href="/"
+        >
+          Home
         </a>
-        <div className="gap-14 hidden lg:flex ">
-          
-          <a className=" hover:text-teal-500" href="/form">
-            Join
-          </a>
-          <a className=" hover:text-teal-500" href="/timeline">
-            Timeline
-          </a>
-          <a className=" hover:text-teal-500" href="/people">
-            People
-          </a>
-          <a className=" hover:text-teal-500" href="/FAQs">
-            FAQs
-          </a>
-          <a
-          className="hover:scale-105 transition duration-300"
-          href="mailto:philkhanasidharth14@gmail.com"
-          >Contact
-          </a>
-        </div>
-        <RiMenuLine
-          onClick={toggleNav}
-          className="flex lg:hidden w-5 h-5 cursor-pointer"
-        />
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px]"
+          href="/form"
+        >
+          Join
+        </a>
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px]"
+          href="/timeline"
+        >
+          Timeline
+        </a>
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px]"
+          href="/people"
+        >
+          People
+        </a>
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px]"
+          href="/FAQs"
+        >
+          FAQs
+        </a>
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px] transition duration-300"
+          href="mailto:ultra@theananta.in"
+        >
+          Contact
+        </a>
       </div>
-
-      {isNavOpen && ( // Render the navigation links if isNavOpen is true
-        <div className="flex flex-col lg:hidden ">
-          <a className=" hover:text-teal-500 mx-8 mb-4" href="/form">
-            Join
-          </a>
-          <a className=" hover:text-teal-500 mx-8 my-4" href="/timeline">
-            Timeline
-          </a>
-          <a className=" hover:text-teal-500 mx-8 my-4" href="/people">
-            People
-          </a>
-          <a className=" hover:text-teal-500 mx-8 my-4" href="/FAQs">
-            FAQs
-          </a>
-          <a
-          className=" hover:text-teal-500 mx-8 my-4"
-          href="mailto:philkhanasidharth14@gmail.com"
-          >Contact
-          </a>
-        </div>
-      )}
+      <RiMenuLine
+        onClick={toggleNav}
+        className="flex lg:hidden w-5 h-5 cursor-pointer"
+      />
     </div>
   );
 }

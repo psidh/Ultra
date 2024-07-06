@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-outline {
+  color: white; /* Set the text color to white */
+  -webkit-text-stroke-width: 1.5px; /* Outline width */
+  -webkit-text-stroke-color: black; /* Outline color */
+}
+.nav a {
+  /* border-right: 1px solid black; */
+  padding: 2.2rem 2.5rem;
+}
+.nav a:first-child {
+  /* border-left: 1px solid black; */
+  /* border-right: 1px solid black; */
+  padding: 2.2rem 2.5rem;
+}
+
 @layer base {
   h1 {
     @apply text-3xl md:text-6xl lg:text-8xl;
