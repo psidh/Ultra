@@ -13,12 +13,12 @@ export default function Navbar() {
   return (
     <div
       className="px-8 md:px-20 lg:px-20 
-      flex justify-between items-center border-[1px] border-t-0 border-black uppercase
+      flex justify-between items-center border-b-[1px] border-neutral-200 uppercase
       
       "
     >
       <a href="/" className="flex gap-4 items-center py-6">
-        <p className="font-bold text-outline text-2xl border-[1.5px] border-black px-[0.6rem] py-[2px] rounded-md hover:bg-black hover:text-outline-white hover:scale-[110%] transition-all duration-300">
+        <p className="font-bold text-outline text-2xl border-[1.5px] border-neutral-200 px-[0.6rem] py-[2px] rounded-md hover:bg-black hover:text-outline-white hover:scale-[110%] transition-all duration-300">
           U
         </p>
         <p className="font-bold text-2xl leading-4 mt-1">
@@ -38,21 +38,21 @@ export default function Navbar() {
         </a>
         <a
           className="hover:underline underline-offset-[6px] decoration-[1px]"
-          href="/form"
+          href="/join"
         >
           Join
         </a>
-        <a
+        {/* <a
           className="hover:underline underline-offset-[6px] decoration-[1px]"
           href="/timeline"
         >
           Timeline
-        </a>
+        </a> */}
         <a
           className="hover:underline underline-offset-[6px] decoration-[1px]"
-          href="/people"
+          href="/team"
         >
-          People
+          team
         </a>
         <a
           className="hover:underline underline-offset-[6px] decoration-[1px]"

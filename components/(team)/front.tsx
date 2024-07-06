@@ -1,5 +1,5 @@
-import frontData from '../../utils/front.js';
-import Line from '../line';
+import frontData from "../../utils/front.js";
+import Line from "../line";
 
 interface Person {
   name: string;
@@ -7,7 +7,7 @@ interface Person {
   role: string;
 }
 
-const people: Person[] = frontData;
+const team: Person[] = frontData;
 
 const Front: React.FC = () => {
   return (
@@ -16,50 +16,49 @@ const Front: React.FC = () => {
       <div className="flex items-center justify-center md:space-x-16 h-fit">
         <div className="my-8 md:my-16 flex flex-col items-center justify-between">
           <img
-            src="/people/me.jpeg"
+            src="/team/me.jpeg"
             alt="P Sidharth image"
             className="w-32 h-32 md:h-44 md:w-44  object-cover rounded-full mb-4 text-center"
           />
           <h2 className="text-xl font-semibold text-center">
             Philkhana Sidharth
           </h2>
-          <p className="text-gray-500 text-center">
+          <p className="text-neutral-500 text-center mt-2">
             Founder
             <br />
-            NextJs & React Developer
+            Full Stack Developer
           </p>
         </div>
         <div className="my-16 flex flex-col items-center justify-between">
           <img
-            src="/people/manas.png"
+            src="/team/manas.png"
             alt="Manas Malla image"
             className="w-32 h-32 md:h-44 md:w-44 object-cover rounded-full mb-4 text-center"
           />
           <h2 className="text-xl font-semibold text-center">Manas Malla</h2>
-          <p className="text-gray-500 text-center">
-            CTO | GDSC Lead <br /> Flutter | Android
+          <p className="text-neutral-500 text-center mt-2">
+            Chief Technical Officer <br /> Google Product Expert - Android
           </p>
         </div>
       </div>
-      <h1 className="text-2xl md:text-4xl font-bold px-16 text-left ">Front-End</h1>
+      <h1 className="text-2xl md:text-4xl font-bold px-16 text-left ">
+        Front-End Team
+      </h1>
       <Line />
-      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-8">
-        {people.map((person) => (
+      <div className="m-16 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-8">
+        {team.map((person) => (
           <div
             key={person.name}
-            className="p-4 rounded-md shadow-md flex flex-col items-center justify-center"
+            className="p-4 rounded-md border border-neutral-200 flex flex-col items-center justify-center"
           >
             <img
               src={person.image}
               alt={person.name}
               className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-full mb-4 text-center"
             />
-            <h2 className="text-lg md:text-xl text-gray-300 font-semibold text-center">
+            <h2 className="text-lg md:text-xl font-semibold text-center">
               {person.name}
             </h2>
-            <p className="text-sm md:text-lg text-gray-500 text-center">
-              {person.role}
-            </p>
           </div>
         ))}
       </div>

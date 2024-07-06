@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
         {/* Logo and About Section */}
         <div className="p-8 md:p-0">
           <h2 className="text-4xl font-bold py-2">Ultra</h2>
-          <p className="text-gray-400 py-2 w-[32ch]">
+          <p className="text-neutral-400 py-2 w-[32ch]">
             Join our community of tech enthusiasts to learn, collaborate, and
             grow together in the ever-evolving world of technology.
           </p>
@@ -43,11 +43,11 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
               <FaLinkedin className="text-white hover:text-blue-500" />
             </a>
             <a
-              href="https://github.com/psidh"
+              href="https://github.com/Ultra-v1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="text-white hover:text-gray-600" />
+              <FaGithub className="text-white hover:text-neutral-600" />
             </a>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
           ))}
       </div>
 
-      <div className="py-8 border-t border-gray-600 ">
+      <div className="py-8 border-t border-neutral-600 ">
         <p className="text-sm opacity-60 text-center">
           &copy; {new Date().getFullYear()} Ultra. All rights reserved.
         </p>

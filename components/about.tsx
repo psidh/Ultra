@@ -1,16 +1,14 @@
 import { FiArrowRight } from "react-icons/fi";
 
 function About() {
-  // const cardClass = `p-4 md:w-1/2 lg:w-2/3 bg-[#1b1b1b] rounded-xl text-[#dcdcdc] border border-gray-700 m-2 md:m-0`;
-
   return (
     <div className="flex flex-col items-center justify-center h-fit w-full">
       <div className="w-full">
-        <h2 className="text-5xl lg:text-7xl font-semibold p-16 border-b-[1px] border-black">
+        <h2 className="text-5xl lg:text-7xl font-semibold p-16 border-b-[1px] border-neutral-200">
           Welcome to Ultra
         </h2>
-        <div className="flex justify-center border-b-[1px] border-black items-center flex-col md:flex-row w-ful text-lg text-white font-thin">
-          <div className="py-16 pb-24 bg-[#10439F] hover:bg-white hover:text-black transition-all duration-300 grow flex flex-col items-center justify-center">
+        <div className="flex justify-between border-b-[1px] border-neutral-200 items-center flex-col md:flex-row w-ful text-lg text-white font-thin">
+          <div className="bg-[#10439F] about">
             <div>
               <div className="flex justify-between w-full">
                 <h3 className="text-3xl font-semibold mb-6 uppercase">
@@ -24,8 +22,7 @@ function About() {
               </p>
             </div>
           </div>
-
-          <div className="py-16 pb-24 bg-[#874CCC] border-x-[1px] border-black hover:bg-white hover:text-black transition-all duration-300 grow flex flex-col items-center justify-center">
+          <div className="bg-[#874CCC] border-x-[1px] border-[#874CCC] about">
             <div>
               <div className="flex justify-between w-full">
                 <h3 className="text-3xl font-semibold mb-6 uppercase">
@@ -40,7 +37,7 @@ function About() {
               </p>
             </div>
           </div>
-          <div className="py-16 pb-24 bg-[#C65BCF] hover:bg-white hover:text-black transition-all duration-300 grow flex flex-col items-center justify-center">
+          <div className="bg-[#C65BCF] about">
             <div>
               <div className="flex justify-between w-full h-max">
                 <h3 className="text-3xl font-semibold mb-6 uppercase">

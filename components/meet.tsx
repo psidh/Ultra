@@ -4,16 +4,16 @@ import { useRouter } from "next/navigation";
 function begin() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/people");
+    router.push("/team");
   };
   return (
     <>
       <div className="flex md:flex-row flex-col justify-between items-center my-32 mx-16">
         <div className="md:w-1/2 flex flex-col justify-center items-center">
           <img
-            src="/people/me.jpeg"
+            src="/team/me.jpeg"
             alt="React Code snippet"
-            className="w-48 h-48 rounded-full opacity-80"
+            className="w-48 h-48 rounded-full opacity-90"
           />
           <p className="text-center mt-8 font-medium text-xl">
             Philkhana Sidharth
@@ -22,9 +22,9 @@ function begin() {
         </div>
         <div className="md:w-1/2 flex flex-col justify-center items-center">
           <img
-            src="/people/manas.png"
+            src="/team/manas.png"
             alt="React Code snippet"
-            className="w-48 h-48 rounded-full opacity-80"
+            className="w-48 h-48 rounded-full opacity-90"
           />
           <p className="text-center mt-8 font-medium text-xl">Manas Malla</p>
           <p className="text-center mb-2 ">Chief Technical Officer</p>
@@ -32,7 +32,7 @@ function begin() {
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center  lg:m-8 text-center">
           <h3 className="mx-16 my-4 md:mx-0 font-bold">Meet the Team</h3>
           <h4 className="mx-16 mb-4 md:mx-0 text-center w-full ">
-            Get to know people working
+            Get to know team working
             <br />
             and building things!
           </h4>
