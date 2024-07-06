@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const initialFormState = {
   name: "",
@@ -32,7 +32,7 @@ const MyForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.info("The form is being submitted... Please Wait");
+    toast.loading("The form is being submitted... Please Wait");
   };
 
   const handleSaveData = async () => {
@@ -63,7 +63,7 @@ const MyForm: React.FC = () => {
 
   return (
     <div>
-      <ToastContainer />
+      <Toaster />
       <div className="flex justify-center items-center flex-col">
         <h3 className="m-12 text-4xl font-bold">
           Start by telling us about yourself
