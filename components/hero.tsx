@@ -1,9 +1,9 @@
 import Ocean from "./ocean";
 function Hero() {
   return (
-    <section className="h-[87vh] border-b-[1.5px] border-black">
-      <div className="flex flex-col lg:flex-row justify-between items-center h-full w-full">
-        <div className="w-full lg:w-1/2 border-r-[1px] border-black relative overflow-clip h-full">
+    <section className="md:h-[87vh] border-b-[1.5px] border-black">
+      <div className="flex flex-col lg:flex-row justify-between items-center h-[135vh] md:h-full w-full">
+        <div className="w-full lg:w-1/2 border-r-[1px] border-black relative overflow-clip h-[70vh] md:h-full">
           <img
             title="homepage_background"
             src="/space/homepage_background.svg"
@@ -20,10 +20,10 @@ function Hero() {
             className="h-full w-full object-fill absolute z-20 -bottom-1/2 -right-1/2"
           />
           <div className="py-32 px-8 lg:px-24 z-30 text-white flex flex-col justify-center items-center absolute top-0 h-full w-full left-0">
-            <h1 className="text-5xl md:text-5xl font-bold text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-center">
               Perform duties, <br /> detach from results.
             </h1>
-            <h2 className="pb-2 text-3xl mt-4 lg:mt-8 opacity-70">
+            <h2 className="pb-2 text-xl md:text-3xl mt-4 lg:mt-8 opacity-70">
               Bhagavad Gita
             </h2>
             <h2 className="text-lg lg:text-2xl font-mono opacity-50 mb-8">

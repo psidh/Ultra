@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="flex flex-col items-center justify-center h-fit w-full">
       <div className="w-full">
-        <h2 className="text-5xl lg:text-7xl font-semibold p-16 border-b-[1px] border-black">
+        <h2 className="text-5xl lg:text-7xl font-semibold p-12 md:p-16 border-b-[1px] border-black">
           Welcome to Ultra
         </h2>
         <div className="flex justify-between border-b-[1px] border-black items-center flex-col md:flex-row w-ful text-lg text-white font-thin">

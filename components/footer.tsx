@@ -14,10 +14,10 @@ const Footer: React.FC<FooterProps> = ({ sections = [] }) => {
     <footer className="bg-[#151b5b] text-white">
       <div className="container mx-auto w-full py-12">
         {/* Logo and About Section */}
-        <div className="p-8 md:p-0 flex justify-between items-end">
+        <div className="p-8 md:p-0 flex flex-col md:flex-row justify-between md:items-end">
           <div>
             <h2 className="text-4xl font-bold py-2">Ultra</h2>
-            <p className="opacity-70 py-2 w-[32ch]">
+            <p className="opacity-70 py-2 md:w-[32ch]">
               Join our community of tech enthusiasts to learn, collaborate, and
               grow together in the ever-evolving world of technology.
             </p>
