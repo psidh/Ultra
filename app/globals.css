@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Choose one of these or customize later */
-@import 'highlight.js/styles/github.css';  /* or 'monokai.css', 'atom-one-dark.css' */
-
 
 .text-outline {
   color: white; /* Set the text color to white */

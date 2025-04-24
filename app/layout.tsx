@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 const inter = Plus_Jakarta_Sans({ subsets: ["latin"] });
-import 'highlight.js/styles/github.css';
 
 
 export const metadata: Metadata = {
