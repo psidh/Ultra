@@ -1,4 +1,4 @@
-import connectMongoDB from '@/libs/mongodb';
+import connectMongoDB from '@/lib/mongodb';
 import Form from '@/models/form';
 import { NextResponse } from 'next/server';
 

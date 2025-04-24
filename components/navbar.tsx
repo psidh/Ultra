@@ -50,6 +50,12 @@ export default function Navbar() {
         </a> */}
         <a
           className="hover:underline underline-offset-[6px] decoration-[1px]"
+          href="/blogs"
+        >
+          blogs
+        </a>
+        <a
+          className="hover:underline underline-offset-[6px] decoration-[1px]"
           href="/team"
         >
           team
